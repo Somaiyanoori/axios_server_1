@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Edit Task</title>
+  <link rel="stylesheet" href="/css/main.css" />
+</head>
+<body>
+  <div class="form-container">
+    <h1>Edit Task</h1>
+    <form action="/editTask/<%= task.taskID %>" method="POST">
+      <label for="task">Task:</label>
+      <input type="text" id="task" name="task" value="<%= task.task %>" required />
+
+      <label for="difficulty">Difficulty:</label>
+      <select name="difficulty" id="difficulty" required>
+        <option value="easy" <%= task.difficulty === 'easy' ? 'selected' : '' %>>Easy</option>
+        <option value="medium" <%= task.difficulty === 'medium' ? 'selected' : '' %>>Medium</option>
+        <option value="hard" <%= task.difficulty === 'hard' ? 'selected' : '' %>>Hard</option>
+      </select>
+
+      <label for="type">Type:</label>
+      <input type="text" id="type" name="type" value="<%= task.type %>" required />
+
+      <label for="participants">Participants:</label>
+      <select name="participants" id="participants" required>
+        <option value="1" <%= task.participants === 1 ? 'selected' : '' %>>1</option>
+        <option value="2" <%= task.participants === 2 ? 'selected' : '' %>>2</option>
+        <option value="3" <%= task.participants === 3 ? 'selected' : '' %>>3</option>
+        <option value="4" <%= task.participants === 4 ? 'selected' : '' %>>4</option>
+      </select>
+
+      <label for="cost">Cost:</label>
+      <select name="cost" id="cost" required>
+        <option value="low" <%= task.cost === 'low' ? 'selected' : '' %>>Low</option>
+        <option value="moderate" <%= task.cost === 'moderate' ? 'selected' : '' %>>Moderate</option>
+        <option value="high" <%= task.cost === 'high' ? 'selected' : '' %>>High</option>
+      </select>
+
+      <label for="accessibility">Accessibility:</label>
+      <input type="text" id="accessibility" name="accessibility" value="<%= task.accessibility %>" required />
+
+      <label for="timeRequired">Time Required:</label>
+      <input type="text" id="timeRequired" name="timeRequired" value="<%= task.timeRequired %>" required />
+
+      <label for="familyFriendly">Family Friendly:</label>
+      <select name="familyFriendly" id="familyFriendly" required>
+        <option value="true" <%= task.familyFriendly ? 'selected' : '' %>>Yes</option>
+        <option value="false" <%= !task.familyFriendly ? 'selected' : '' %>>No</option>
+      </select>
+
+      <label for="link">Link (optional):</label>
+      <input type="url" id="link" name="link" value="<%= task.link %>" />
+
+      <button type="submit" class="submit-btn">Update Task</button>
+    </form>
+  </div>
+</body>
+</html>

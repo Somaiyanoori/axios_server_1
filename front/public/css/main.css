@@ -1,0 +1,143 @@
+
+/* Container for heading and buttons */
+.center-container {
+  text-align: center;
+}
+
+/* Button styling */
+.button-container {
+  margin-top: 20px;
+}
+
+form {
+  display: inline-block;
+  margin: 10px;
+}
+
+button.create,
+button.show {
+  padding: 12px 24px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Create Button */
+button.create {
+  background-color: #28a745;
+  color: white;
+}
+
+button.create:hover {
+  background-color: #218838;
+}
+
+/* Show Button */
+button.show {
+  background-color: #007bff;
+  color: white;
+}
+
+button.show:hover {
+  background-color: #0056b3;
+}
+/* Reset some basic styles */
+
+
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #e0f7fa, #fce4ec);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px 20px;
+}
+
+/* Form Container Styling */
+.form-container {
+  background: white;
+  padding: 40px 30px;
+  border-radius: 16px;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  width: 100%;
+  transition: transform 0.3s ease;
+}
+
+.form-container:hover {
+  transform: scale(1.01);
+}
+
+/* Title */
+.form-container h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #333;
+  font-size: 1.8rem;
+}
+
+/* Form Styles */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+label {
+  font-weight: 600;
+  margin-bottom: 4px;
+  color: #555;
+}
+
+input,
+select {
+  padding: 12px;
+  border: 1.5px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.2s ease-in-out;
+}
+
+input:focus,
+select:focus {
+  border-color: #00bcd4;
+  outline: none;
+  background-color: #f9f9ff;
+}
+
+/* Submit Button */
+.submit-btn {
+  background-color: #00bcd4;
+  color: white;
+  font-weight: bold;
+  padding: 14px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+  background-color: #0097a7;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .form-container {
+    padding: 30px 20px;
+  }
+
+  .form-container h1 {
+    font-size: 1.5rem;
+  }
+}

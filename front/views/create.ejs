@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create Task</title>
+    <link rel="stylesheet" href="/css/main.css" />
+  </head>
+  <body>
+    <div class="form-container">
+      <h1>Create a New Task</h1>
+      <form action="/createTask" method="POST">
+        <label for="task">Task:</label>
+        <input type="text" id="task" name="task" required />
+
+        <label for="difficulty">Difficulty:</label>
+        <select name="difficulty" id="difficulty" required>
+          <option value="easy">Easy</option>
+          <option value="medium">Medium</option>
+          <option value="hard">Hard</option>
+        </select>
+
+        <label for="type">Type:</label>
+        <input type="text" id="type" name="type" required />
+
+        <label for="participants">Participants:</label>
+        <select name="participants" id="participants" required>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+        </select>
+
+        <label for="cost">Cost:</label>
+        <select name="cost" id="cost" required>
+          <option value="low">Low</option>
+          <option value="moderate">Moderate</option>
+          <option value="high">High</option>
+        </select>
+
+        <label for="accessibility">Accessibility:</label>
+        <input type="text" id="accessibility" name="accessibility" required />
+
+        <label for="timeRequired">Time Required:</label>
+        <input type="text" id="timeRequired" name="timeRequired" required />
+
+        <label for="familyFriendly">Family Friendly:</label>
+        <select name="familyFriendly" id="familyFriendly" required>
+          <option value="true">Yes</option>
+          <option value="false">No</option>
+        </select>
+
+        <label for="link">Link (optional):</label>
+        <input type="url" id="link" name="link" />
+
+        <button type="submit" class="submit-btn">Create Task</button>
+      </form>
+    </div>
+  </body>
+</html>
